@@ -37,3 +37,7 @@ chrome.tabs.query({
     },
   );
 });
+
+$(document).ready(function() {
+  $('ul.nav-tabs').sortable();
+})

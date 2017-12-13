@@ -1,0 +1,35 @@
+body {
+  min-width: 700px;
+  min-height: 1000px;
+  color: grey;
+  background-color: #333;
+}
+table {
+  width: 100%;
+}
+td {
+  padding: 1px;
+  margin: 0;
+  border-bottom: 1.5px solid lightgrey;
+}
+td:last-child {
+  width: 40%;
+  word-break: break-all;
+  color: grey;
+}
+td:first-child {
+ width: 60%;
+ color: lightgrey;
+}
+.tab-pane {
+  padding: 10px 0;
+  overflow: auto;
+}
+.nav-tabs > li:not(.active):not(:hover) > a {
+  color: #333;
+  background-color: grey;
+}
+#find-id > * {
+  color: lightgrey;
+  text-align: center;
+}

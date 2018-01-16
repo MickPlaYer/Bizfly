@@ -17,6 +17,13 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
     var link = $('script[src*="/s/files/"]').prop('src')
     // Directly respond to the sender (popup),
     // through the specified callback */
-    response({ info: info, link: link });
+    response({ info, link })
+  } else if ((msg.from === 'popup') && (msg.subject === 'switch')) {
+    if (!!location.search) {
+      location.search = ''
+    } else {
+      location.search = 'v=2'
+    }
+    response('ok')
   }
 });

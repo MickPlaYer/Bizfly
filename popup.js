@@ -11,6 +11,9 @@ function setFormInfo(info) {
     tb.append($('<tr><td>' + k + '</td><td>' + h[k]  + '</td></tr>'))
   })
   p.html(t)
+  var quickButton = $('<button class="btn btn-default pull-right">Switch</button>')
+  quickButton.click(switchVersion)
+  $(title).append(quickButton)
 }
 
 function setFindId(assetLink) {
@@ -19,7 +22,7 @@ function setFindId(assetLink) {
   var r = assetLink.match(/\/(\d+)\/theme\/(\d+)/)
   var shopId = r[1]
   var themeId = r[2]
-  $('#find-id').html('<h2>Shop Id: ' + shopId + '</h2><h2>Theme Id: ' + themeId + '</h2>')
+  $('#find-id').html(`<h2>Shop Id: ${shopId}</h2><h2>Theme Id: ${themeId}</h2><h3>shops/${shopId}/themes/${themeId}</h3>`)
 }
 
 // ...query for the active tab...
@@ -38,6 +41,21 @@ chrome.tabs.query({
   );
 });
 
+function switchVersion() {
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true,
+  }, function (tabs) {
+    // ...and send a request for the DOM info...
+    chrome.tabs.sendMessage(
+      tabs[0].id,
+      { from: 'popup', subject: 'switch' },
+    );
+  });
+}
+
 $(document).ready(function() {
-  $('ul.nav-tabs').sortable();
+  $('ul.nav-tabs').sortable(
+    // TODO: save sorted order to localstorage.
+  );
 })

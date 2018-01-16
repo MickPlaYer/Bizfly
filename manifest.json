@@ -18,14 +18,15 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*.cyberbiz.co.dev/*",
-        "http://*.cyberbiz.v3.dev/*",
+        "http://*.cyberbiz.co.local/*",
+        "http://*.cyberbiz.v3.local/*",
         "http://*.testcyb.info/*",
         "http://*.cyberbiz.co/*",
-        "https://*.cyberbiz.co.dev/*",
-        "https://*.cyberbiz.v3.dev/*",
+        "https://*.cyberbiz.co.local/*",
+        "https://*.cyberbiz.v3.local/*",
         "https://*.testcyb.info/*",
         "https://*.cyberbiz.co/*",
+        "https://*.cyberbiz.tw/*",
         "https://*.com/*"
       ],
       "js": ["jquery.js", "main.js"]

@@ -27,7 +27,10 @@
         "https://*.testcyb.info/*",
         "https://*.cyberbiz.co/*",
         "https://*.cyberbiz.tw/*",
-        "https://*.com/*"
+        "https://*.com/*",
+        "https://*.tw/*",
+        "http://*.com/*",
+        "http://*.tw/*"
       ],
       "js": ["jquery.js", "main.js"]
     }

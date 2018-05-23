@@ -22,6 +22,7 @@
         "http://*.cyberbiz.v3.local/*",
         "http://*.testcyb.info/*",
         "http://*.cyberbiz.co/*",
+        "http://*.lvh.me:*/*",
         "https://*.cyberbiz.co.local/*",
         "https://*.cyberbiz.v3.local/*",
         "https://*.testcyb.info/*",
